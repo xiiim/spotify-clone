@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation"
 import { ReactNode, useMemo } from "react";
 import { HiHome } from "react-icons/hi"
 import { BiSearch } from "react-icons/bi"
+import { AiOutlineStar } from 'react-icons/ai';
 import Box from "./Box";
 import SidebarItem from "./SidebarItem";
 import Library from "./Library";
@@ -36,6 +37,12 @@ const Sidebar: React.FC<SidebarProps> = ({
       label: 'Search',
       active: pathname === '/search',
       href: '/search'
+    },
+    {
+      icon: AiOutlineStar,
+      label: "Developer's Taste",
+      active: pathname === '/myTaste',
+      href: '/myTaste'
     }
   ], [pathname])
 

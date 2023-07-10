@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx"
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
+import { AiOutlineStar } from 'react-icons/ai';
 import Button from "./Button";
 import useAuthModal from "@/hooks/useAuthModal";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
@@ -121,6 +122,19 @@ const Header: React.FC<HeaderProps> = ({
             "
           >
             <BiSearch className="text-black" size={20} onClick={() => router.push('/search')}/>
+          </button>
+          <button 
+            className="
+              rounded-full
+              p-2
+              bg-white
+              items-center
+              justify-center
+              hover:opacity-75
+              transition
+            "
+          >
+            <AiOutlineStar className="text-black" size={20} onClick={() => router.push('/myTaste')}/>
           </button>
         </div>
         <div 
